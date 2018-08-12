@@ -1,5 +1,9 @@
 {
   "scripts": {
     "start": "json-server --watch db.json --routes routes.json"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
   }
 }
