@@ -38,17 +38,25 @@ exports.setAll = function (newUsers) {
 };
 
 exports.getOne = function (id) {
-
 };
 
 exports.addOne = function (user) {
- 
+  user.add(function(err, data) { 
+    if (err) {
+      console.log(err);
+    }
+    else {
+      res.send(data);
+    }
+  });
+
 };
 
 exports.updateOne = function (id, newProperties) {
- 
 };
 
 exports.deleteOne = function (id) {
- 
+  user.deleteOne({ id: 'id' }, function (err) {
+    if (err) return handleError(err);
+  });
 };

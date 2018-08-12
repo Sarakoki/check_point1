@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 var mongoose = require('mongoose');
-
+var contr = require('./jobController.js')
 
 var dbURI = 'mongodb://localhost/jobquery';
 
@@ -27,5 +27,12 @@ describe('Job Controller', function () {
   });
 
   // TODO: Write your tests for jobController here
- 
+  it('should have a method that create job', function (done) {
+    expext(contr.createJob().to.equal(job))
+  });
+
+  it('should have a method that Get all jobs that have a salary greater than $50,000', function (done) {
+    expext(contr.getHighPayingJobs().to.be(done))
+  }); 
+
 });

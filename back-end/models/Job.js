@@ -2,6 +2,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+
 var JobSchema = new Schema({
     company: String,
     title: String,
@@ -11,5 +12,3 @@ var JobSchema = new Schema({
   });
   
 var Job = mongoose.model('Job', JobSchema);
-
-module.export = Job;
